@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="eng">
+
+<head>
+	<meta charset="utf-8" />
+	<title>SMS Sender</title>
+	<meta name="description" content="SMS Sender" />
+	<link rel="stylesheet" href="style_sms_sender.css" type="text/css" />
+	<script defer src="sms_sender.js"></script>
+	<script src="jquery-3.6.0.min.js"></script>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+	</style>
+</head>
+
+<body>
+	<div class = "container">
+	
+		<div id="header">
+			<h2>Text message sender</h2>
+			<div class="line"></div>
+		</div>
+		
+		<!--form method="POST" id="form"-->
+		<form id="form">
+		<!--form method="POST" action="receive.php" id="form"-->
+			<div class="form-control">
+				<label>Your nickname</label>
+				<input type="text"		id="nickname" 		placeholder="Matt3000">	
+				<i class="gg-check-o"></i>			
+				<i class="gg-danger"></i>
+				<small>Error message</small></br>
+			</div>
+
+			<div class="form-control">
+				<label>Receiver's phone number</label>
+				<input type="number" 	id="receiver_num" 	placeholder="123 456 789">
+				<i class="gg-check-o"></i>			
+				<i class="gg-danger"></i>
+				<small>Error message</small></br>
+			</div>
+
+			<div class="form-control">
+				<label>Text message</label>
+				<input type="text" 		id="message" 		placeholder="Hello, World!">
+				<i class="gg-check-o"></i>			
+				<i class="gg-danger"></i>	
+				<small>Error message</small></br>
+			</div>
+
+			<div class="form-control" id="check-div">
+				
+				<input type="checkbox" 	id="terms">
+				<label >I accept Terms of Use</label>
+				<i class="gg-check-o"></i>			
+				<i class="gg-danger"></i>
+				<small>Error message</small></br>
+			</div>
+
+			<!-- button type="submit">Submit</button -->
+			<button type="button" id = "submit-button"onclick="checkInputs()">Send!</button>
+		</form>
+	
+		<!--div id="JSON-result"> Uncomment to see sent JSON results</div-->
+	</div>
+</body>
+
+</html>
